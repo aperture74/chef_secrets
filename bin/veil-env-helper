@@ -5,7 +5,7 @@ require 'json'
 require 'optparse'
 
 options = {
-  secrets_file: "/etc/opscode/private-chef-secrets.json",
+  secrets_file: "/etc/fnzcode/private-chef-secrets.json",
   pack: false,
   use_file: false,
   debug: false,
@@ -36,7 +36,7 @@ OptionParser.new do |opts|
     options[:optional_secrets] << spec
   end
 
-  opts.on("-f SECRETS_FILE", "--secrets-file SECRETS_FILE", "Location of veil-managed secrets file. Default: /etc/opscode/private-chef-secrets.json") do |file|
+  opts.on("-f SECRETS_FILE", "--secrets-file SECRETS_FILE", "Location of veil-managed secrets file. Default: /etc/fnzcode/private-chef-secrets.json") do |file|
     options[:secrets_file] = file
   end
 end.parse!

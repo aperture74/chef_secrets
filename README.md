@@ -157,12 +157,12 @@ Rotate the service credentials for a single Chef Server subsystem
 
 Regenerating the shared secrets regenerates the shared services, all credentials
 and resets their credential_version to 0. In this scenario the user needs to to
-redistribute /etc/opscode/private-chef-secrets.json:
+redistribute /etc/fnzcode/private-chef-secrets.json:
 
   ```shell
   $: chef-server-ctl rotate-shared-secrets
   ...
   The shared secrets and all service credentials have been rotated!
-  Please copy /etc/opscode/private-chef-secrets.json to each Chef Server and
+  Please copy /etc/fnzcode/private-chef-secrets.json to each Chef Server and
   run 'chef-server-ctl reconfigure'
   ```

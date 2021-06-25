@@ -25,7 +25,7 @@ module Veil
       # @param [Hash] opts
       #   a hash of options to pass to the constructor
       def initialize(opts = {})
-        @path = (opts[:path] && File.expand_path(opts[:path])) || "/etc/opscode/private-chef-secrets.json"
+        @path = (opts[:path] && File.expand_path(opts[:path])) || "/etc/fnzcode/private-chef-secrets.json"
 
         import_existing = File.exists?(path) && (File.size(path) != 0)
         legacy = true
